@@ -125,14 +125,6 @@ BIDModelCM <- confusionMatrix(PrBUILDINGID, validationData$BUILDINGID)
 BIDModelCM ### 100% Accuract ###
 #### END BUILDINGID ####
 
-#### Rotation of the coordinates so that to predict easier the BUILDINGID ####
-#Rotating the coordinates so that to be easier and more accurate to predict the BUILDINGID
-# The angle is a little bit more manipulated so that to be more visible
-# FullData[,313:314] <- Rotation(FullData[,313:314], 29*pi/180)
-# validationData[,313:314] <- Rotation(validationData[,313:314], 29*pi/180)
-# plot(FullData[313:314])
-#### END ROTATION ####
-
 #### LONGITUDE LONGITUDE LONGITUDE LONGITUDE LONGITUDE LONGITUDE LONGITUDE LONGITUDE LONGITUDE ####
 # #Creating data partition nad a 10-fold CV
 # inTraining <- createDataPartition(FullData$LONGITUDE, p=.80, list = FALSE)
