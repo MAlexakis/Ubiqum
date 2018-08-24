@@ -93,7 +93,6 @@ hist(x$values, xlab = "WAP strength", main = "Distribution of WAPs signal stengt
      col = "red")
 
 
-
 ## ---------- Module 4 - Task 3 ---------- ##
 ### ------------- Modeling -------------- ###
 
@@ -180,19 +179,7 @@ postResample(PrLATITUDE,validationData$LATITUDE) # 3.9002826 0.9970939 #
 # plot(CheckCoordinates)
 #### ENDF Re-ROTATION ####
 
-##### # Create dummy variables and normalise them so that to use it for classification ####
-# dmy <- dummyVars(" ~ BUILDINGID", data = FullData)
-# FullDataDmy <- data.frame(predict(dmy, newdata = FullData))
-# FullData[317:319] <- FullDataDmy
-# dmy2 <- dummyVars(" ~ BUILDINGID", data = validationData)
-# validationDataDmy <- data.frame(predict(dmy, newdata = validationData))
-# validationData[317:319] <- validationDataDmy
 
-# NormBuild <- as.data.frame(apply(FullData[, 317:319], 2, function(x) (x - min(x))/(max(x)-min(x))))
-# FullData[317:319] <- NormBuild[1:2]
-# NormBuidVal <- as.data.frame(apply(validationData[, 317:319], 2, function(x) (x - min(x))/(max(x)-min(x))))
-# validationData[317:319] <- NormBuidVal[1:2]
-#### End Dummies #### 
 
 #### COORDINATED NORMALIZATION FOR FLOOR PREDICTION ####
 NormCoords <- as.data.frame(apply(FullData[, 313:314], 2, function(x) (x - min(x))/(max(x)-min(x))))
