@@ -71,7 +71,7 @@ remove(Checkrows,NormFullData,NormValData,i,NoVarTr,NoVarVal,tr)
 
 pacman::p_load(DescTools,	scatterplot3d,plotly)
 
-# Observation of the Data and the building shame
+# Observation of the Data and the building shape
 ggplot(trainingData, aes(x=LONGITUDE, y=LATITUDE, color=BUILDINGID)) +
   geom_point()
 ggplot(validationData, aes(x=LONGITUDE, y=LATITUDE, color=BUILDINGID)) +
@@ -173,14 +173,6 @@ postResample(PrLATITUDE,validationData$LATITUDE) # 3.9002826 0.9970939 #
 # with Knn I got 5.798817 0.993230 #
 #### END LATITUDE ####
 
-#### Re-ROTATE TEH COORDINATES ####
-# # Checking if the rotation is ok
-# CheckCoordinates <- Rotation(TrCoordinates, (-29)*pi/180)
-# plot(CheckCoordinates)
-#### ENDF Re-ROTATION ####
-
-
-
 #### COORDINATED NORMALIZATION FOR FLOOR PREDICTION ####
 NormCoords <- as.data.frame(apply(FullData[, 313:314], 2, function(x) (x - min(x))/(max(x)-min(x))))
 FullData[317:318] <- NormCoords[1:2]
@@ -254,9 +246,5 @@ scatterplot3d(LargeErrorRows$LONGITUDE, LargeErrorRows$LATITUDE, LargeErrorRows$
               color = LargeErrorRows$FLOOR, main = "Error Coordinates and Floors")
 ggplot(LargeErrorRows, aes(x=LONGITUDE, y=LATITUDE, color=BUILDINGID)) + geom_point()
 #### End coordinates' error ####
-
-#### FLOOR PREDICTION ERRORS ####
-FLOORErros <- validationData[which(validationData$FLOOR != PrFLOOR),]
-#### ####
 
 remove(NormCoords,NormCoordsVal)
