@@ -97,9 +97,3 @@ http://localhost:21116/session/viewhtml3e8044b5d5e6/index.html
 ###### 2. Comparison Between Large errors and real values of radial coordinates
 The chart bellow shows the real values in blue and it highlits with big red dots the observations that give large wrong predictions. The small red dots are the wrong predictions.
 ![comparison between validation data and predictions](https://user-images.githubusercontent.com/42608658/44664397-6b885f00-aa13-11e8-82ef-a88fd0c07e70.png)
-
-
-
-#########################################################################################################
-                    
-
