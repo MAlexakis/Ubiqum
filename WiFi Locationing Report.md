@@ -1,10 +1,11 @@
 # Indoor-Wifi-Locationing
-This project is to predict users' location (Building, Floor and Coordinates) at Jaume I University from WAPs signal information using classification and regression machine learning algorithms
+This project is to predict users' location (Building, Floor and Coordinates) at Jaume I University from WAPs signal information using classification and regression machine learning algorithms.
 
 ## About the datasets
 Two datasets, training and validation, contain information about 520 WAPs signal strengths, three buildings and their floors, coordinates of users who logged in, space where the users logged in and the relative position (inside or outside the room), user ID, phone ID, and timestamp. 
 The data was collected at Jaume I University.
-More information about the dataset can be found on the source link provided below:
+
+More information about the dataset can be found on the source link:
 http://archive.ics.uci.edu/ml/datasets/UJIIndoorLoc
 
 ## Objective
